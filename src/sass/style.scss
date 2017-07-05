@@ -161,7 +161,30 @@ a {
 ///////////////////////////////////////////////////////////////
 
 
-// $small : 
+
+
+
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+///////////////////////     MIXINS    //////////////////////
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+@mixin flexRow() {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexColumn() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 ///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////
 ///////////////////////     BASES    //////////////////////////
@@ -171,7 +194,139 @@ a {
     box-sizing: border-box;
 }
 
-body {
-    height: 100px;
+html, body {
+    height: 100%;
 }
+
+.header {
+    width: 100%;
+    .menu {
+        width: 100%;
+        background-color: tomato;
+        .menu_btn {
+            @include flexColumn();
+            .menu_btn-btn {
+                float: right;
+            }
+        }
+        .menu_list {
+            @include flexRow();
+            justify-content: space-around;
+            // flex-wrap: wrap;
+            width: 100%;
+            text-align: center;
+            height: 0px;
+            overflow: hidden;
+            transition: height 0.3s ease-out;
+            -webkit-transition: height 0.3s ease-out;
+            -moz-transition: height 0.3s ease-out;
+            -o-transition: height 0.3s ease-out;
+            .menu_list-item {
+                background-color: #000;
+                // margin: 45px 25px;
+                p {
+                    color: #fff;
+                    margin: 50px 15px; 
+                }
+            }
+        }
+        .menu_list:hover {
+            height: 100%;
+            transition: height 0.3s ease-out;
+            -webkit-transition: height 0.3s ease-out;
+            -moz-transition: height 0.3s ease-out;
+            -o-transition: height 0.3s ease-out;
+        }
+    }
+}
+
+.menu_open {
+    height: 412px!important;
+    transition: height 0.3s ease-out;
+    -webkit-transition: height 0.3s ease-out;
+    -moz-transition: height 0.3s ease-out;
+    -o-transition: height 0.3s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
