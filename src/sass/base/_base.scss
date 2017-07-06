@@ -14,7 +14,7 @@
 
 $blue: #136CFF;
 $black: #202020;
-$white: #ffffff;
+$white: #ffffff; 
 $pink: #FF6A6A;
 $pink-use: #f3406b;
 
@@ -34,6 +34,8 @@ body, html {
 	font-size: 10px;
 	font-family: 'Open Sans', sans-serif;
 	position: relative;
+	width: 100%;
+	overflow: hidden;
 }
 
 ////////////////////////////////
@@ -66,6 +68,17 @@ body, html {
 		    }
 		}
 	}
+
+	.header_btn_press a{
+		text-decoration: none;
+		i{
+			font-size: 4.5rem;
+			color: $blue;
+		}
+		&:hover{
+			color: $pink;
+		}
+	}
 }
 
 ////////////////////////////////
@@ -77,14 +90,18 @@ body, html {
 	&_info {
 		text-align: center;
 		padding: 0 25%;
+		margin-top: 50px;
 		&_title {
 			text-transform: uppercase;
 			letter-spacing: 3px;
-			font-size: 2.5rem;
+			font-size: 3.2rem;
 			margin: 0;
+			font-weight: 800;
 		}
 		&_p {
 			font-size: 1.5rem;
+			margin-top: 10px;
+			margin-bottom: 20px;
 		}
 		&_btn {
 			@include flexRow();
@@ -92,18 +109,21 @@ body, html {
 				background-color: $blue;
 				width: 200px;
 				height: 45px;
-			    padding-top: 12px;
-			    margin-right: 20px;
-			    border-radius: 50px;
-			    text-align: center;
-			    font-weight: lighter;
-			    font-size: 1.4rem;
-			    border: 1px solid $blue;
-    		    transition: all 0.3s ease 0s;
-			    &:hover{
-			    	background-color: transparent;
-			    	color: $blue;
-		    	}
+		    padding-top: 12px;
+		    margin-right: 20px;
+		    border-radius: 50px;
+		    text-align: center;
+		    font-weight: lighter;
+		    font-size: 1.4rem;
+		    border: 1px solid $blue;
+		    transition: all 0.3s ease 0s;
+		    text-decoration: none;
+
+		    &:hover{
+		    	text-decoration: none;
+		    	background-color: transparent;
+		    	color: $blue;
+	    	}
 			}
 
 			&_right {
@@ -118,9 +138,12 @@ body, html {
 			    border: 1px solid $pink-use;
 		    	color: $pink-use;
 		    	transition: all 0.3s ease 0s;
+		    	text-decoration: none;
+
 			    &:hover{
 						background-color: $pink-use;
 			    	color: $white;
+		    		text-decoration: none;
 			    }
 			}
 		}
