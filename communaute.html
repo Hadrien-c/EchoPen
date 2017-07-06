@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<meta name="viewport" content="i nitial-scale=1.0,width=device-width">
+	<meta charset="UTF-8">
 
 	<!-- MATERIAL FONTS-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
@@ -13,8 +14,12 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
 
   <!-- SLICK SLIDER -->
-  <link rel="stylesheet" href="css/slick-theme.css">
-  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 
   <!-- STYLE -->
 	<link rel="stylesheet" href="dest/css/style.min.css">
@@ -42,32 +47,91 @@
 	<!-- ////////////////////////// -->
 	<!-- //////// CONTENT //////// -->
 	<!-- //////////////////////// -->
+	<div class="page-communaute">
+		<section class="section">
+			<div class="section_info">
 
-	<section class="section">
-		<div class="section_info">
-
-			<h1 class="section_info_title">Devenez un echopen'er</h1>
-			<p class="section_info_p">Déjà plus de 300 collaborateurs répartis dans le monde entier, réunissant leurs compétences pluridisciplinaires au service d'un projet commun</p>
-			<div class="section_info_btn">
-				<a class="section_info_btn_left" href="">L'écosystème Echopen</a>	
-				<a class="section_info_btn_right" href="">Apporter mon expertise</a>
+				<h1 class="section_info_title">Devenez un echopen'er</h1>
+				<p class="section_info_p">Déjà plus de 300 collaborateurs répartis dans le monde entier, réunissant leurs compétences pluridisciplinaires au service d'un projet commun</p>
+				<div class="section_info_btn">
+					<a class="section_info_btn_left" href="">L'écosystème Echopen</a>	
+					<a class="section_info_btn_right" href="">Apporter mon expertise</a>
+				</div>
 			</div>
+		</section>
 
+		<div class="slider">
 
-			<!-- <div class="center">
-				<div class="hello">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor deserunt numquam voluptatibus blanditiis eveniet ex, maiores? Consequuntur quo minus, quis, culpa sit quibusdam distinctio exercitationem alias, deleniti laboriosam maxime, beatae.</div>
-				<div class="hello">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor deserunt numquam voluptatibus blanditiis eveniet ex, maiores? Consequuntur quo minus, quis, culpa sit quibusdam distinctio exercitationem alias, deleniti laboriosam maxime, beatae.</div>
+	    <div class="slide">
+	    	<button type="button" class="btn" data-toggle="modal" data-target="#myModal">
+		    	<img class="img" src="src/img/sophie.png" alt="">
+	    		<div class="tag">Physiciens</div>
+	    		<div class="twitter"><i class="zmdi zmdi-twitter"></i></div>
+	    		<div class="mail"><i class="zmdi zmdi-email"></i></div>
+	    		<div class="content">
+	    			<div class="name">Sophie, 27 ans</div>
+	    			<div class="bio">Étudiante en « Physique et chimie des matériaux” à l’Université Pierre et Marie Curie</div>
+	    		</div>
+	    	</button>
+	    </div>
 
-				<div class="hello">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor deserunt numquam voluptatibus blanditiis eveniet ex, maiores? Consequuntur quo minus, quis, culpa sit quibusdam distinctio exercitationem alias, deleniti laboriosam maxime, beatae.</div>
-				<div class="hello">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor deserunt numquam voluptatibus blanditiis eveniet ex, maiores? Consequuntur quo minus, quis, culpa sit quibusdam distinctio exercitationem alias, deleniti laboriosam maxime, beatae.</div>
-				<div class="hello">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor deserunt numquam voluptatibus blanditiis eveniet ex, maiores? Consequuntur quo minus, quis, culpa sit quibusdam distinctio exercitationem alias, deleniti laboriosam maxime, beatae.</div>
-				<div class="hello">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor deserunt numquam voluptatibus blanditiis eveniet ex, maiores? Consequuntur quo minus, quis, culpa sit quibusdam distinctio exercitationem alias, deleniti laboriosam maxime, beatae.</div>
-				<div class="hello">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor deserunt numquam voluptatibus blanditiis eveniet ex, maiores? Consequuntur quo minus, quis, culpa sit quibusdam distinctio exercitationem alias, deleniti laboriosam maxime, beatae.</div>
-				
-			</div> -->
+	    <div class="slide">
+	    	<img class="img" src="src/img/matthieu.png" alt="">
+    		<div class="tag">Makers</div>
+    		<div class="twitter"><i class="zmdi zmdi-twitter"></i></div>
+    		<div class="mail"><i class="zmdi zmdi-email"></i></div>
+    		<div class="content">
+    			<div class="name">Mathieu, 30 ans</div>
+    			<div class="bio">Développeur web, diplômé de l’Hetic</div>
+    		</div>
+	    </div>
 
-		</div>
-	</section>
+	    <div class="slide">
+	    	<img class="img" src="src/img/yann.jpg" alt="">
+    		<div class="tag">Physiciens</div>
+    		<div class="twitter"><i class="zmdi zmdi-twitter"></i></div>
+    		<div class="mail"><i class="zmdi zmdi-email"></i></div>
+    		<div class="content">
+    			<div class="name">Yann, 48 ans</div>
+    			<div class="bio">Chirurgien Cardio-Vasculaire à l’Hôpital Georges Pompidou de Paris</div>
+    		</div>
+	    </div>
+
+      <div class="slide">
+	    	<img class="img" src="src/img/sophie.png" alt="">
+    		<div class="tag">Physiciens</div>
+    		<div class="twitter"><i class="zmdi zmdi-twitter"></i></div>
+    		<div class="mail"><i class="zmdi zmdi-email"></i></div>
+    		<div class="content">
+    			<div class="name">Sophie, 27 ans</div>
+    			<div class="bio">Étudiante en « Physique et chimie des matériaux” à l’Université Pierre et Marie Curie</div>
+    		</div>
+	    </div>
+
+	    <div class="slide">
+	    	<img class="img" src="src/img/matthieu.png" alt="">
+    		<div class="tag">Makers</div>
+    		<div class="twitter"><i class="zmdi zmdi-twitter"></i></div>
+    		<div class="mail"><i class="zmdi zmdi-email"></i></div>
+    		<div class="content">
+    			<div class="name">Mathieu, 30 ans</div>
+    			<div class="bio">Développeur web, diplômé de l’Hetic</div>
+    		</div>
+	    </div>
+
+	    <div class="slide">
+	    	<img class="img" src="src/img/yann.jpg" alt="">
+    		<div class="tag">Physiciens</div>
+    		<div class="twitter"><i class="zmdi zmdi-twitter"></i></div>
+    		<div class="mail"><i class="zmdi zmdi-email"></i></div>
+    		<div class="content">
+    			<div class="name">Yann, 48 ans</div>
+    			<div class="bio">Chirurgien Cardio-Vasculaire à l’Hôpital Georges Pompidou de Paris</div>
+    		</div>
+	    </div>
+	    
+	  </div>
+	</div>
 
 	<!-- ////////////////////////// -->
 	<!-- ///////// FOOTER //////// -->
@@ -120,9 +184,37 @@
 		</div>
 	</footer>
 
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+	      </div>
+	      <div class="modal-body">
+	        ...
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+
+	<!-- ////////////////////////// -->
+	<!-- ///////// SCRIPT //////// -->
+	<!-- //////////////////////// -->
+
   <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/slick.min.js"></script>
+  <script src="slick/slick.min.js"></script>
   <script src="js/communaute.js"></script>
+
+  <script src="js/bootstrap.min.js"></script>
 
 </body>
 </html>

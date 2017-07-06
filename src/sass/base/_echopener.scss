@@ -1,0 +1,103 @@
+.page-communaute{
+	.slider{
+		margin-top: 50px;
+
+		.slide{
+			background-color: grey;
+			position: relative;
+			margin-right: 20px;
+			overflow: hidden;
+			outline: none;
+
+			.img{
+				width: 100%;
+			}
+
+			.tag{
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				background-color: #2B2B2B;
+				font-size: 1.4rem;
+				font-weight: 600;
+				color: #ffffff;
+		    padding: 5px 10px;
+			}
+
+			.twitter, 
+			.mail{
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				width: 44px;
+				height: 44px;
+				background-color: rgba(40, 36, 36, 0.2);
+				border: solid 1px white;
+				border-radius: 50px;
+				text-align: center;
+
+				i{
+					font-size: 2rem;
+					color: white;
+					text-align: center;
+			    padding-top: 12px;
+				}
+			}
+
+			.mail{
+				top: 65px;
+			}
+
+			.content{
+				position: absolute;
+				bottom: 0;
+				height: 90px;
+				width: 100%;
+				
+				background-color: rgba(20, 20, 20, 0.74);
+				color: white;
+				padding: 10px 20px;
+				.name{
+					font-weight: 600;
+					font-size: 2rem;
+				}
+
+				.bio{
+					font-size: 1.4rem;
+					margin-top: 5px;
+					width: 90%;
+				}
+			}
+
+			&.slick-slide.slick-current.slick-active.slick-center{
+				.img{
+					width: 110%;
+				}
+
+			}
+		}
+	}
+
+	.slick-prev, .slick-next {
+	  height: 338px;
+	  width: 179px;
+    z-index: 90;
+
+    &:before,
+    &:after{
+    	display: none;
+    }
+	}
+
+	.btn {
+    display:block;
+    padding: 0;
+    margin: 0;
+    background-image: none;
+    border: none;
+    border-radius: 0;
+	}
+
+	
+}
+
