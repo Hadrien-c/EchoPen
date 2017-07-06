@@ -1,0 +1,120 @@
+.page-event{
+	a {
+		text-decoration: none!important;
+	}
+	.slider{
+		margin-top: 50px;
+
+		.slide{
+			background-color: grey;
+			position: relative;
+			margin-right: 20px;
+			overflow: hidden;
+			outline: none;
+
+			.img{
+				width: 100%;
+			}
+
+			.tag{
+				position: absolute;
+				top: 40px;
+				left: 30px;
+				font-size: 1.6rem;
+				font-weight: 600;
+				color: #ffffff;
+		    	span {
+		    		font-size: 1.3rem;
+		    		font-weight: lighter;
+		    		width: 105px;
+		    	}
+			}
+
+			.content{
+				position: absolute;
+				bottom: 0;
+				left: 30px;
+				height: 90px;
+				width: 90%;
+				color: white;
+				.date{
+					font-weight: 600;
+					font-size: 3.5rem;
+					line-height: 15px;
+					display: inline-block;
+					span {
+						font-size: 1rem;
+						font-weight: lighter;
+					    padding-left: 2px;
+					}
+				}
+				.rsvp {
+					background-color: $blue;
+				    padding: 5px 20px;
+				    margin-right: 20px;
+				    border-radius: 50px;
+				    text-align: center;
+				    letter-spacing: 3px;
+				    font-weight: 500;
+				    font-size: 1.4rem;
+				    border: 1px solid $blue;
+	    		    transition: all 0.3s ease 0s;
+	    		    float: right;
+				    &:hover{
+				    	background-color: #fff;
+				    	color: $blue;
+			    	}
+				}
+			}
+
+			.texte{
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				vertical-align: middle;
+				background-color: rgba(0, 0, 0, 0.75);
+				display: none;
+				color: white;
+				text-align: center;
+				padding: 40px;
+				font-size: 1.8rem;
+			}
+
+			&.slick-slide.slick-current.slick-active.slick-center{
+				.img{
+					width: 110%;
+				}
+			}
+
+			&.slick-center:hover .texte{
+				display: block;
+			}
+		}
+	}
+
+	.slick-prev, .slick-next {
+	  height: 338px;
+	  width: 179px;
+	  z-index: 90;
+
+	    &:before,
+	    &:after{
+	    	display: none;
+    	}
+	}
+
+	.btn {
+    display:block;
+    padding: 0;
+    margin: 0;
+    background-image: none;
+    border: none;
+    border-radius: 0;
+	}
+
+
+
+	
+}
+
