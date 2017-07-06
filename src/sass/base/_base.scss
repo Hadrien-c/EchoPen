@@ -16,6 +16,7 @@ $blue: #136CFF;
 $black: #202020;
 $white: #ffffff;
 $pink: #FF6A6A;
+$pink-use: #f3406b;
 
 
 * {
@@ -48,19 +49,20 @@ body, html {
 	&_btn {
 		@include flexRow();
 		.contribute{
-			background-color: $pink;
+			background-color: $pink-use;
 			width: 220px;
 			height: 45px;
-	    padding-top: 11px;
-	    margin-right: 20px;
-	    border-radius: 50px;
-	    text-align: center;
-	    font-size: 1.6rem;
-	    border: 1px solid $pink;
-	    &:hover{
-	    	background-color: transparent;
-	    	color: $pink;
-	    }
+		    padding-top: 11px;
+		    margin-right: 20px;
+		    border-radius: 50px;
+		    text-align: center;
+		    font-size: 1.4rem;
+		    border: 1px solid $pink-use;
+		    transition: all 0.3s ease 0s;
+		    &:hover{
+		    	background-color: transparent;
+		    	color: $pink-use;
+		    }
 		}
 	}
 }
@@ -89,34 +91,36 @@ body, html {
 				background-color: $blue;
 				width: 200px;
 				height: 45px;
-		    padding-top: 12px;
-		    margin-right: 20px;
-		    border-radius: 50px;
-		    text-align: center;
-		    font-weight: lighter;
-		    font-size: 1.4rem;
-		    border: 1px solid $blue;
-		    &:hover{
-		    	background-color: transparent;
-		    	color: $blue;
-		    }
+			    padding-top: 12px;
+			    margin-right: 20px;
+			    border-radius: 50px;
+			    text-align: center;
+			    font-weight: lighter;
+			    font-size: 1.4rem;
+			    border: 1px solid $blue;
+    		    transition: all 0.3s ease 0s;
+			    &:hover{
+			    	background-color: transparent;
+			    	color: $blue;
+		    	}
 			}
 
 			&_right {
 				width: 200px;
 				height: 45px;
-		    padding-top: 12px;
-		    margin-right: 20px;
-		    border-radius: 50px;
-		    text-align: center;
-		    font-weight: lighter;
-		    font-size: 1.4rem;
-		    border: 1px solid $pink;
-	    	color: $pink;
-		    &:hover{
-					background-color: $pink;
-		    	color: $white;
-		    }
+			    padding-top: 12px;
+			    margin-right: 20px;
+			    border-radius: 50px;
+			    text-align: center;
+			    font-weight: lighter;
+			    font-size: 1.4rem;
+			    border: 1px solid $pink-use;
+		    	color: $pink-use;
+		    	transition: all 0.3s ease 0s;
+			    &:hover{
+						background-color: $pink-use;
+			    	color: $white;
+			    }
 			}
 		}
 	}
