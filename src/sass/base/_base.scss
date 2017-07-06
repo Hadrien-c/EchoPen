@@ -43,29 +43,31 @@ body, html {
 //////////////////////////////
 
 .header {
-	@include flexRow();
-	justify-content: space-between;
-	background-color: transparent;
-	padding: 20px;
-
-	&_btn {
+	.global_nav	{
 		@include flexRow();
-		.contribute{
-			background-color: $pink-use;
-			width: 220px;
-			height: 45px;
-		    padding-top: 11px;
-		    margin-right: 20px;
-		    border-radius: 50px;
-		    text-align: center;
-		    font-size: 1.4rem;
-		    border: 1px solid $pink-use;
-		    text-decoration: none;
-		    transition: all 0.3s ease 0s;
-		    &:hover{
-		    	background-color: transparent;
-		    	color: $pink-use;
-		    }
+		justify-content: space-between;
+		background-color: transparent;
+		padding: 20px;
+		// transition: all 0.2s ease 0s;
+		.header_btn {
+			@include flexRow();
+			.contribute{
+				background-color: $pink-use;
+				width: 220px;
+				height: 45px;
+			    padding-top: 11px;
+			    margin-right: 20px;
+			    border-radius: 50px;
+			    text-align: center;
+			    font-size: 1.4rem;
+			    border: 1px solid $pink-use;
+			    text-decoration: none;
+			    transition: all 0.3s ease 0s;
+			    &:hover{
+			    	background-color: transparent;
+			    	color: $pink-use;
+			    }
+			}
 		}
 	}
 
@@ -81,6 +83,62 @@ body, html {
 			color: $pink;
 		}
 	}
+	.menu_list {
+        @include flexRow();
+        justify-content: space-around;
+        background-color: $black;
+        position: fixed;
+        width: 100%;
+        text-align: center;
+        height: 0px;
+        overflow: hidden;
+        transition: height 0.3s ease-out;
+        -webkit-transition: height 0.3s ease-out;
+        -moz-transition: height 0.3s ease-out;
+        -o-transition: height 0.3s ease-out;
+        @media screen and (max-width:955px) {
+            @include flexColumn();
+            justify-content: flex-strat;
+        }
+        .menu_list-item {
+            background-color: #404040;
+            border-radius: 10px;
+            padding:30px 75px 30px 30px;
+            @include flexRow();           
+            @media screen and (max-width: 955px) {
+                margin: 20px 0;
+            }
+            img {
+            	margin-right: 30px;
+            }
+            .menu_item-img {
+            	height: 100px;
+            	width: 100px;
+            }
+            .menu_item-description {
+                color: #fff;
+                text-align: left;
+                min-width: 116px;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.global_nav_active {
+	background-color:$black!important;
+	// transition: all 0.2s ease 0s;
+}
+
+.menu_open {
+    height: 260px!important;
+    transition: height 0.3s ease-out;
+    -webkit-transition: height 0.3s ease-out;
+    -moz-transition: height 0.3s ease-out;
+    -o-transition: height 0.3s ease-out;
+    @media screen and (max-width:955px) {
+        height: 100%!important;
+    }
 }
 
 ////////////////////////////////
