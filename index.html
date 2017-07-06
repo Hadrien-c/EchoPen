@@ -4,17 +4,29 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<meta name="viewport" content="i nitial-scale=1.0,width=device-width">
+
+	<!-- MATERIAL FONTS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  <!-- STYLE -->
 	<link rel="stylesheet" href="dest/css/style.min.css">
+
 </head>
 <body>
+
+	<!-- ////////////////////////// -->
+	<!-- ///////// HEADER //////// -->
+	<!-- //////////////////////// -->
 	<header class="header">
 		<div class="header_logo">
 			<img src="dest/img/logo2.png" alt="" class="header_logo_img">
 		</div>
 		<div class="header_btn">
-			<div class="header_btn_cta">
-				<a href="">Comment contribuer ?</a>
-			</div>
+			<a class="contribute"	href="">Comment contribuer ?</a>
 			<div class="header_btn_press">
 				<a href="">
 					<img src="dest/img/btn_press.png" alt="">
@@ -22,6 +34,11 @@
 			</div>
 		</div>
 	</header>
+
+	<!-- ////////////////////////// -->
+	<!-- //////// CONTENT //////// -->
+	<!-- //////////////////////// -->
+
 	<section class="section">
 		<div class="section_info">
 			<h1 class="section_info_title">
@@ -31,12 +48,8 @@
 				Déjà plus de 300 collaborateurs répartis dans le monde entier, réunissant leurs compétences pluridisciplinaires au service d'un projet commun
 			</p>
 			<div class="section_info_btn">
-				<div class="section_info_btn_left">
-					<a href="">L'écosystème Echopen</a>	
-				</div>
-				<div class="section_info_btn_right">
-					<a href="">Apporter mon expertise</a>
-				</div>
+				<a class="section_info_btn_left" href="">L'écosystème Echopen</a>	
+				<a class="section_info_btn_right" href="">Apporter mon expertise</a>
 			</div>
 		</div>
 		<div class="section_gallery">
@@ -50,6 +63,11 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- ////////////////////////// -->
+	<!-- ///////// FOOTER //////// -->
+	<!-- //////////////////////// -->
+
 	<footer class="footer">
 		<div class="footer_copyright">
 			<p class="footer_copyright_p">
@@ -77,12 +95,25 @@
 			</div>
 		</div>
 		<div class="footer_reseaux">
-			<div class="footer_reseaux_img"></div>
-			<div class="footer_reseaux_img"></div>
-			<div class="footer_reseaux_img"></div>
-			<div class="footer_reseaux_img"></div>
-			<div class="footer_reseaux_img"></div>
+			<ul>
+				<li>
+					<a href="#"><i class="zmdi zmdi-email"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="zmdi zmdi-twitter"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="zmdi zmdi-facebook"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-slack" aria-hidden="true"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="zmdi zmdi-github-box"></i></a>
+				</li>
+			</ul>
 		</div>
 	</footer>
+
 </body>
 </html>

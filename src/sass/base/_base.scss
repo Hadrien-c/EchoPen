@@ -14,9 +14,12 @@
 
 $blue: #136CFF;
 $black: #202020;
+$white: #ffffff;
+$pink: #FF6A6A;
+
 
 * {
-	 box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 a {
@@ -26,36 +29,45 @@ a {
 
 body, html {
 	height: 100%;
-	margin:0;
-	font-size:10px;
-	font-family: 'Open Sans';
+	margin: 0 auto;
+	font-size: 10px;
+	font-family: 'Open Sans', sans-serif;
+	position: relative;
 }
+
+////////////////////////////////
+//////////// HEADER ///////////
+//////////////////////////////
 
 .header {
 	@include flexRow();
 	justify-content: space-between;
 	background-color: transparent;
 	padding: 20px;
-	&_logo {
-		&_img {
-			
-		}
-	}
+
 	&_btn {
 		@include flexRow();
-		&_cta {
-			background-color: $blue;
-			width: 200px;
+		.contribute{
+			background-color: $pink;
+			width: 220px;
 			height: 45px;
-		    padding-top: 15px;
-		    margin-right: 20px;
-		    border-radius: 50px;
-		    text-align: center;
-		    font-weight: bold;
-		    font-size: 1.3rem;
+	    padding-top: 11px;
+	    margin-right: 20px;
+	    border-radius: 50px;
+	    text-align: center;
+	    font-size: 1.6rem;
+	    border: 1px solid $pink;
+	    &:hover{
+	    	background-color: transparent;
+	    	color: $pink;
+	    }
 		}
 	}
 }
+
+////////////////////////////////
+//////////// CONTENT //////////
+//////////////////////////////
 
 .section {
 	@include flexColumn();
@@ -66,23 +78,45 @@ body, html {
 			text-transform: uppercase;
 			letter-spacing: 3px;
 			font-size: 2.5rem;
+			margin: 0;
 		}
 		&_p {
 			font-size: 1.5rem;
 		}
 		&_btn {
 			@include flexRow();
-			padding: 20px;
-			&_left,&_right {
+			&_left {
 				background-color: $blue;
 				width: 200px;
 				height: 45px;
-			    padding-top: 15px;
-			    margin-right: 20px;
-			    border-radius: 50px;
-			    text-align: center;
-			    font-weight: lighter;
-			    font-size: 1.3rem;
+		    padding-top: 12px;
+		    margin-right: 20px;
+		    border-radius: 50px;
+		    text-align: center;
+		    font-weight: lighter;
+		    font-size: 1.4rem;
+		    border: 1px solid $blue;
+		    &:hover{
+		    	background-color: transparent;
+		    	color: $blue;
+		    }
+			}
+
+			&_right {
+				width: 200px;
+				height: 45px;
+		    padding-top: 12px;
+		    margin-right: 20px;
+		    border-radius: 50px;
+		    text-align: center;
+		    font-weight: lighter;
+		    font-size: 1.4rem;
+		    border: 1px solid $pink;
+	    	color: $pink;
+		    &:hover{
+					background-color: $pink;
+		    	color: $white;
+		    }
 			}
 		}
 	}
@@ -95,14 +129,25 @@ body, html {
 	}
 }
 
+////////////////////////////////
+//////////// FOOTER ///////////
+//////////////////////////////
+
 .footer {
+  height: 48px;
+
 	@include flexRow();
 	justify-content: space-around;
 	background-color: $black;
 	font-size: 1.3rem;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+
 	&_copyright {
 		color: #fff;
 	}
+
 	&_nav {
 		@include flexRow();
 		&_item {
@@ -110,18 +155,57 @@ body, html {
 			&:nth-child(even){
 				margin: 0 20px;
 			}
+			a:hover{
+				color: $blue;
+			}
 		}
 	}
+
 	&_reseaux {
 		@include flexRow();
-		&_img {
-			height: 30px;
-			width: 30px;
-			background-color: #fff;
-			&:nth-child(even){
-				margin: 0 20px;
+		ul{
+			padding: 0;
+			margin: 0;
+			li{
+				list-style: none;
+				display: inline-block;
+		    margin: 0 8px;
+        width: 40px;
+   		 	text-align: center;
+
+				&:before{
+					content: "";
+					width: 1px;
+					background-color: $white;
+					height: 50px;
+					display: inline-block;
+				}
+
+				a{
+					cursor: pointer;
+					text-decoration: none;
+					i{
+						color: $white;
+						font-size: 2rem;
+				    vertical-align: top;
+				    margin-top: 18px;
+				    margin-left: 16px;
+					}
+					&:hover i{
+						color: $blue;
+					}
+				}
 			}
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
 
