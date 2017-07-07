@@ -1,4 +1,19 @@
 .page-mecene{
+
+	
+	.header_btn_press a{
+		text-decoration: none;
+		height: 50px;
+	  	display: block;
+		i{
+			font-size: 4.5rem;
+			color: $blue;
+		}
+		&:hover{
+			color: $pink;
+		}
+	}
+
 	a {
 		text-decoration: none;
 	}
@@ -82,7 +97,8 @@
 	}
 
 	.slick-prev, .slick-next {
-	  height: 338px;
+	      height: 1328px;
+
 	  width: 179px;
     z-index: 90;
 

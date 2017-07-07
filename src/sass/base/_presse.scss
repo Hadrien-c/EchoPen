@@ -1,7 +1,12 @@
 .page-presse{
-	background-color: $blue;
+	background-color: #2B2B2B;
 	color: $white;
   height: 836px;
+
+  header{
+  	background-color: #2B2B2B;
+  	
+  }
 
   .header_btn .contribute:hover{
   	background-color: $white;
@@ -15,7 +20,7 @@
 		display: block;
 		i {
 	    font-size: 2.5rem;
-	    margin-left: 16px;
+	    margin-left: 18px;
   	  margin-top: 12px;
 	    color: $blue;
 		}
@@ -156,7 +161,7 @@
 	}
 
 	.slick-prev, .slick-next {
-	  height: 338px;
+    height: 1328px;
 	  width: 179px;
     z-index: 90;
 
