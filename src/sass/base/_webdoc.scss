@@ -1,0 +1,240 @@
+ /*CODE A METTRE AU BON ENDROIT, MIS LA POUR EVITER LES CONFLITS*/
+ .header{
+ position:relative;
+ z-index:1;
+ }
+  #black_overlay {
+ 	height: 100%;
+ 	width: 100%;
+ 	background-color: rgba(0,0,0, 0.3);
+ }
+//HUSH HUSH/
+
+ .webdoc-inactive .page-webdoc #webdoc-overlay{
+ cursor : cell;
+ }
+ .page-webdoc{
+ position: absolute;
+ top: 0;
+ z-index: 0;
+ height: calc(100vh - 48px);
+ width:100%;
+
+ .webdoc-hidden{
+ visibility: hidden;
+ }
+ #webdoc-content.webdoc-hidden{
+ transition: all .8s ease;
+ opacity: 0;
+ transform: translateY(-75%);
+ }
+ .webdoc-slide.webdoc-hidden{
+ display:none;
+ }
+ 
+ #webdoc-content{
+ transition: all .8s;
+ position: absolute;
+ top: 50%;
+ left: 0;
+ width:100%;
+ opacity: 1;
+ transform: translateY(-50%);
+ .webdoc-title{
+ color: #fff;
+ font-size: 40px;
+ font-weight:600;
+ width: 75%;
+ line-height:50px;
+ }
+ .webdoc-text{
+ color: #fff;
+ font-size: 1.9rem;
+ line-height: 26px;
+ font-weight: 300;
+ width: 60%;
+ margin-top: 30px;
+ &.webdoc-textSmall{
+ 	font-size: 1.8rem;
+ 	line-height: 18px;
+ 	font-weight: 600;
+ 	text-align: center;
+ 	width:100%;
+ 	margin-bottom: 50px;
+ }
+ }
+ .webdoc-slide{
+    width: 100%;
+    padding: 0 10%;
+ }
+ .webdoc-slideContainer{
+ width: 50%;
+ float:left;
+ box-sizing: border-box; 
+ .webdoc-title{
+ 	font-size: 2rem;
+ 	line-height:26px;
+ 	width: 100%;
+ 	text-align:center;
+ }
+ }
+ }
+ .webdoc-list{
+ margin-top:80px;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ 	li{
+	 	// display: inline-block;
+	 	display: flex;
+	 	flex-direction: column;
+	 	justify-content: center;
+	 	align-items: center;
+	 	list-style:none;
+	 	width: 24%;
+	 	font-size: 1.5rem;
+	 	line-height:24px;
+	 	font-weight:300;
+	 	text-align:center;
+	 	vertical-align:top;
+	 	color: #fff;
+	 	img {
+	 		display: block;
+	 		margin: 0 auto 30px auto;
+	 	}
+	 	p {
+	 		font-size: 1.5rem;
+	 		max-width: 265px;
+	 	}
+	 	strong {
+	 		font-size: 4rem;
+	 	}
+ 	}
+ 	.icon-gel {
+ 		margin-top: -10px;
+ 	}
+ }
+ .webdoc-button{
+ 	background:none;
+ 	box-shadow:none;
+ 	margin-top: 45px;
+ 	border:none;
+ 	a{
+ 		color: #fff;
+ 		padding: 10px 30px; 
+ 		font-size: 14px;
+ 		height: 45px;
+	 	border-radius:20px;
+ 		border:1px solid #fff;
+ 	}
+ }
+.webdoc-part4Slide,
+.webdoc-part5Slide{
+	text-align:center;
+	.webdoc-text,
+	.webdoc-title{
+		text-align:left;
+	}
+}
+
+.webdoc-part5Slide {
+	.webdoc-list {
+		li {
+		 	display: flex;
+		 	flex-direction: column;
+		 	justify-content: center;
+		 	align-items: center;
+		 	list-style:none;
+		 	width: 24%;
+		 	font-size: 1.5rem;
+		 	line-height:24px;
+		 	font-weight:300;
+		 	text-align:center;
+		 	vertical-align:top;
+		 	color: #fff;
+		 	max-width: 250px;
+		}
+		strong {
+			height: 30px;
+		}
+
+	}
+}
+
+ /* Video Overlay */
+
+ #webdoc-overlay {
+ height:100%;
+ width:100%;
+ position:relative;
+ left:0;
+ top:0;
+ overflow: hidden;
+ padding:0 10%;
+ cursor: crosshair;
+ }
+
+
+
+ /* wWbdoc-video */
+
+ #webdoc-video {
+ backface-visibility:hidden;
+ background:url("http://www.markhillard.com/sandbox/media/polina.jpg") no-repeat scroll 0 0 #000;
+ background-size:cover;
+ top:50%;
+ height:auto;
+ min-height:100%;
+ min-width:100%;
+ transform: translateY(-50%);
+ perspective:1000;
+ position:fixed;
+ right:0;
+ width:auto;
+ z-index:-1;
+ }
+
+ #webdoc-pic {
+ display:block;
+ height:auto;
+ width:100%;
+ }
+
+ /* ---- Timeline ---- */
+ .webdoc-timelineContainer{
+	 position: absolute;
+	 z-index:10;
+	 bottom: 12%;
+	 left:50%;
+	 transform: translateX(-50%);
+	 width:80%;
+	 display: block;
+	 height: 4px;
+	 background: #fff; 
+	 padding:0;
+	 li {
+		 position: relative;
+		 cursor:pointer;
+		 top: -8px;
+		 border:5px solid #fff;
+		 transition: all .4s;
+		 display: inline-block;
+		 border-radius: 30px;
+		 width: 20px;
+		 height: 20px;
+		 background: #fff;
+		 margin-left: calc(100%/6);
+		 &:first-child{
+		 	margin-left:-1px;
+		 }
+		 &.webdoc-pointActive{
+		 	border:6px solid #fff;
+		 	transition: all .4s;
+		 	background: #52b6bf;
+		 	box-shadow: 0 0 0 1px #52b6bf;
+		 }
+	 }
+ }
+}
+
